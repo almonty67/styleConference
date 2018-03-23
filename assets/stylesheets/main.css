@@ -62,6 +62,8 @@ body {
 *,
 *:before,
 *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 		box-sizing: border-box;
 }
 
@@ -70,6 +72,7 @@ body {
 	margin: 0 auto;
 	width: 960px;
 }
+
 .container {
 	padding-left: 30px;
 	padding-right: 30px;
@@ -124,26 +127,27 @@ body {
 
 .row {
 	background: #fff;
-	min-width: 960px;
 	padding: 66px 0 44px 0;
 }
 
 .row-alt {
 	background: #cbe2c1;
-	background: -webkit-linear-gradient(to-right, #a1d3b0, #f6f1d3);
-	background: -moz-linear-gradient(to-right, #a1d3b0, #f6f1d3);
-	background: linear-gradient(to-right, #a1d3b0, #f6f1d3);
+	background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+	background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+	background: linear-gradient(to right, #a1d3b0, #f6f1d3);
 	padding: 44px 0 22px 0;
 }
+
 /* =================================================
 					TYPOGRAPHY
 ==================================================== */
-h1, h3, h4, h5, p {
-	margin-bottom: 22px;
-}
 
 h1, h2, h3, h4 {
 	color: #648880;
+}
+
+h1, h3, h4, h5, p {
+	margin-bottom: 22px;
 }
 
 h1 {
@@ -217,8 +221,9 @@ p a {
 }
 
 /* =================================================
-		BUTTONS
+								BUTTONS
 ==================================================== */
+
 .btn {
 	border-radius: 5px;
 	color: #fff;
@@ -241,13 +246,13 @@ p a {
 }
 
 /* =================================================
-	  PRIMARY HEADER
+	  					PRIMARY HEADER
 ==================================================== */
 .logo {
 	border-top: 4px solid #648880;
 	float: left;
 	font-size: 48px;
-	/* font-weight: 100; */
+	font-weight: 100;
 	letter-spacing: .5px;
 	line-height: 44px;
 	padding: 40px 0 22px 0;
@@ -267,7 +272,7 @@ p a {
 }
 
 /* =================================================
-	  PRIMARY FOOTER
+	  					PRIMARY FOOTER
 ==================================================== */
 
 .primary-footer {
@@ -283,14 +288,25 @@ p a {
 }
 
 /* =================================================
-	 NAVIGATION
+	 						NAVIGATION
 ==================================================== */
+
 .nav {
 	text-align: right;
 }
 
+.nav li {
+	display: inline-block;
+	margin: 0 10px;
+	vertical-align: top;
+}
+
+.nav li:last-child {
+	margin-right: 0;
+}
+
 /* =================================================
-		HOME
+									HOME
 ==================================================== */
 .hero {
 	color: #fff;
@@ -310,4 +326,18 @@ p a {
 
 .teaser a:hover h3 {
 	color: #a9b2b9;
+}
+
+/* =================================================
+							SPEAKERS
+==================================================== */
+.speaker {
+		margin-bottom: 44px;
+}
+.speaker-info {
+	border: 1px solid #dfe2e5;
+	border-radius: 5px;
+	margin-top: 88px;
+	padding: 22px 0;
+	text-align: center;
 }
